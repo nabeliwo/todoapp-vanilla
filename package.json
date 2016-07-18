@@ -1,0 +1,43 @@
+{
+  "name": "todoapp-vanilla",
+  "version": "1.0.0",
+  "description": "Vanilla JSでTodoアプリをつくってみた",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run build-js",
+    "lint": "eslint **/*.js",
+    "watch-js": "watchify -d src/javascripts/app.js -t babelify -o dist/bundle.js",
+    "build-js": "browserify src/javascripts/app.js -t babelify -t uglifyify -o dist/bundle.js",
+    "watch-css": "postcss -c ./.postcssrc.json -m",
+    "build-css": "postcss -c ./.postcssrc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabeliwo/todoapp-vanilla.git"
+  },
+  "author": "nabeliwo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabeliwo/todoapp-vanilla/issues"
+  },
+  "homepage": "https://github.com/nabeliwo/todoapp-vanilla#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "cssnano": "^3.7.3",
+    "eslint": "^3.1.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.3",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^5.2.2",
+    "postcss-cli": "^2.5.2",
+    "postcss-import": "^8.1.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "uglifyify": "^3.0.2",
+    "watchify": "^3.7.0"
+  }
+}

@@ -15,7 +15,8 @@ pids
 logs
 results
 build
-dist
+dist/*.js
+dist/*.css
 
 node_modules
 .DS_Store
