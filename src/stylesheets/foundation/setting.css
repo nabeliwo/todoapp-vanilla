@@ -1,0 +1,27 @@
+/*-------------------------------------//
+//  Settings
+//-------------------------------------*/
+
+/*  Base
+//-------------------------------------*/
+
+$base-background-color: #fff;
+$base-font-color: #222;
+$base-font-size: 16px;
+$base-site-color: #1c77ec;
+
+$header-hight: 42px;
+$footer-hight: 36px;
+$alert-color: #ec1c1c;
+
+
+/*  Font
+//-------------------------------------*/
+
+$font-size-xl: calc($base-font-size + 6);
+$font-size-ll: calc($base-font-size + 4);
+$font-size-l: calc($base-font-size + 2);
+$font-size-m: $base-font-size;
+$font-size-s: calc($base-font-size - 2);
+$font-size-ss: calc($base-font-size - 4);
+$font-size-xs: calc($base-font-size - 6);

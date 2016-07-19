@@ -8,7 +8,7 @@
     "lint": "eslint **/*.js",
     "watch-js": "watchify -d src/javascripts/app.js -t babelify -o dist/bundle.js",
     "build-js": "browserify src/javascripts/app.js -t babelify -t uglifyify -o dist/bundle.js",
-    "watch-css": "postcss -c ./.postcssrc.json -m",
+    "watch-css": "postcss -c ./.postcssrc.json -m -w",
     "build-css": "postcss -c ./.postcssrc.json"
   },
   "repository": {

@@ -1,0 +1,20 @@
+/*-------------------------------------//
+//  Label
+//-------------------------------------*/
+
+.c-label {
+  width: 200px;
+  border: 1px solid $base-site-color;
+
+  & > li:not(:first-child) { border-top: 1px solid $base-site-color; }
+}
+.c-label__link {
+  display: block;
+  text-align: left;
+
+  &:hover,
+  &.is-active {
+    background-color: $base-site-color;
+    color: #fff;
+  }
+}

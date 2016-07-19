@@ -1,0 +1,15 @@
+/*-------------------------------------//
+//  Header
+//-------------------------------------*/
+
+.footer {
+  height: $footer-hight;
+  padding: 10px;
+  background-color: $base-site-color;
+}
+.footer__copy {
+  color: #fff;
+  font-size: $font-size-m;
+  line-height: $font-size-m;
+  text-align: center;
+}

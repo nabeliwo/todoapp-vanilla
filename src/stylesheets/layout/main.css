@@ -1,0 +1,38 @@
+/*-------------------------------------//
+//  Main
+//-------------------------------------*/
+
+.container {
+  display: flex;
+  min-height: calc(100vh - $header-hight - $footer-hight);
+  padding: 20px;
+}
+
+.side { padding-right: 20px; }
+
+.main { width: 100%; }
+.main__top {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main__top__cell {
+  display: table-cell;
+  vertical-align: middle;
+
+  &.is-left { text-align: left; }
+  &.is-right { text-align: right; }
+}
+.main__top__btns {
+  font-size: 0;
+
+  & > li {
+    display: inline-block;
+
+    &:not(:first-child) { margin-left: 10px; }
+  }
+}
+.main__top__length {
+  font-size: $font-size-xl;
+  line-height: 26px;
+}

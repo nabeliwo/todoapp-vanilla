@@ -1,0 +1,14 @@
+/*-------------------------------------//
+//  Header
+//-------------------------------------*/
+
+.header {
+  height: $header-hight;
+  padding: 10px;
+  background-color: $base-site-color;
+}
+.header__title {
+  color: #fff;
+  font-size: $font-size-xl;
+  line-height: $font-size-xl;
+}

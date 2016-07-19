@@ -1,0 +1,38 @@
+/*-------------------------------------//
+//  Btn
+//-------------------------------------*/
+
+.c-btn {
+  display: inline-block;
+  text-align: center;
+
+  &.c-btn--default {
+    border: 1px solid $base-site-color;
+    background-color: $base-site-color;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $base-site-color;
+    }
+  }
+  &.c-btn--alert {
+    border: 1px solid $alert-color;
+    background-color: $alert-color;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $alert-color;
+    }
+  }
+
+  &.c-btn--small {
+    padding: 5px;
+    font-size: $font-size-s;
+  }
+  &.c-btn--middle {
+    padding: 10px;
+    font-size: $font-size-m;
+  }
+}

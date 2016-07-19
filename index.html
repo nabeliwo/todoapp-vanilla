@@ -5,11 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no, email=no, address=no">
   <title>TodoApp</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play">
   <link rel="stylesheet" href="dist/bundle.css">
 </head>
 <body>
 
+<header class="header">
+  <h1 class="header__title u-play">TodoApp</h1>
+</header>
 
+<div class="container">
+  <div class="side">
+    <ul class="c-label u-play">
+      <li><a href="#/all" class="c-label__link c-btn c-btn--middle">ALL</a></li>
+      <li><a href="#/active" class="c-label__link c-btn c-btn--middle">ACTIVE</a></li>
+      <li><a href="#/completed" class="c-label__link c-btn c-btn--middle">COMPLETED</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="main__top">
+      <div class="main__top__cell is-left">
+        <ul class="main__top__btns">
+          <li><a href="" class="c-btn c-btn--small c-btn--default">全て完了にする</a></li>
+          <li><a href="" class="c-btn c-btn--small c-btn--alert">完了済みを削除する</a></li>
+        </ul>
+      </div>
+
+      <div class="main__top__cell is-right">
+        <p class="main__top__length u-play">5 / 10</p>
+      </div>
+    </div>
+
+    <div class="c-todo">
+      <form class="c-todo__input">
+        <input type="text" class="c-input c-input--middle" placeholder="input Todo...">
+      </form>
+
+      <ul class="c-todo__list">
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">てすとてすとてすとてすとてすと</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">ご飯をたべる</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">課題をやる</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">長い文章のテストです。長い文章のテストです。長い文章のテストです。長い文章のテストです。長い文章のテストです。長い文章のテストです。長い文章のテストです。長い文章のテストです。</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">てすとてすとてすとてすとてすと</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">てすとてすとてすとてすとてすと</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+
+        <li>
+          <label class="c-todo__list__body c-input--checkbox">
+            <input type="checkbox" class="c-input--checkbox__check">
+            <span class="c-input--checkbox__txt">てすとてすとてすとてすとてすと</span>
+          </label>
+
+          <ul class="c-todo__list__info">
+            <li><i class="c-todo__list__info__icon is-pencil"></i></li>
+            <li><i class="c-todo__list__info__icon is-trash"></i></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p class="footer__copy u-play">&copy; 2016 nabeliwo.</p>
+</footer>
 
 <script src="dist/bundle.js"></script>
 </body>
