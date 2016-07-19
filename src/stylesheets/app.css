@@ -2,32 +2,32 @@
 //  Foundation
 //============================================*/
 
-@import "./foundation/reset";
-@import "./foundation/setting";
-@import "./foundation/base";
+@import url("./foundation/reset.css");
+@import url("./foundation/setting.css");
+@import url("./foundation/base.css");
 
 
 /*==============================================
 //  Layout
 //============================================*/
 
-@import "./layout/main";
-@import "./layout/header";
-@import "./layout/footer";
+@import url("./layout/main.css");
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
 
 
 /*==============================================
 //  Component
 //============================================*/
 
-@import "./component/btn";
-@import "./component/label";
-@import "./component/input";
-@import "./component/todo";
+@import url("./component/btn.css");
+@import url("./component/label.css");
+@import url("./component/input.css");
+@import url("./component/todo.css");
 
 
 /*==============================================
 //  Utility
 //============================================*/
 
-@import "./utility/utility";
+@import url("./utility/utility.css");

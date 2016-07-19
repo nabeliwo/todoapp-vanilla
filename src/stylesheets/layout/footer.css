@@ -3,13 +3,13 @@
 //-------------------------------------*/
 
 .footer {
-  height: $footer-hight;
+  height: var(--footer-hight);
   padding: 10px;
-  background-color: $base-site-color;
+  background-color: var(--base-site-color);
 }
 .footer__copy {
   color: #fff;
-  font-size: $font-size-m;
-  line-height: $font-size-m;
+  font-size: var(--font-size-m);
+  line-height: var(--font-size-m);
   text-align: center;
 }

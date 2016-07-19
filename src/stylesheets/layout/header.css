@@ -3,12 +3,12 @@
 //-------------------------------------*/
 
 .header {
-  height: $header-hight;
+  height: var(--header-hight);
   padding: 10px;
-  background-color: $base-site-color;
+  background-color: var(--base-site-color);
 }
 .header__title {
   color: #fff;
-  font-size: $font-size-xl;
-  line-height: $font-size-xl;
+  font-size: var(--font-size-xl);
+  line-height: var(--font-size-xl);
 }

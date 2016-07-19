@@ -13,9 +13,8 @@ html {
 }
 body {
   height: 100%;
-  background-color: $base-background-color;
-  color: $base-font-color;
-  font-size: $font-size-m;
+  color: var(--base-font-color);
+  font-size: var(--font-size-m);
   word-wrap: break-word;
   font-family: 'PT Sans', Helvetica, Arial, YuGothic, 'Kozuka Gothic std', sans-serif;
 }

@@ -6,11 +6,10 @@
   display: inline-block;
   width: 100%;
   border: 1px solid #ccc;
-
-  &.c-input--middle {
-    padding: 10px 15px;
-    font-size: $font-size-m;
-  }
+}
+.c-input.c-input--middle {
+  padding: 10px 15px;
+  font-size: $font-size-m;
 }
 
 .c-input--checkbox { cursor: pointer; }
@@ -35,18 +34,17 @@
 .c-input--checkbox__check:checked + .c-input--checkbox__txt {
   color: #ccc;
   text-decoration: line-through;
-
-  &:after {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 13px;
-    width: 20px;
-    height: 8px;
-    margin-top: -9px;
-    border-bottom: 2px solid $base-site-color;
-    border-left: 2px solid $base-site-color;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+}
+.c-input--checkbox__check:checked + .c-input--checkbox__txt:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 13px;
+  width: 20px;
+  height: 8px;
+  margin-top: -9px;
+  border-bottom: 2px solid $base-site-color;
+  border-left: 2px solid $base-site-color;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }

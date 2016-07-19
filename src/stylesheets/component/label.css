@@ -4,17 +4,16 @@
 
 .c-label {
   width: 200px;
-  border: 1px solid $base-site-color;
-
-  & > li:not(:first-child) { border-top: 1px solid $base-site-color; }
+  border: 1px solid var(--base-site-color);
 }
+.c-label > li:not(:first-child) { border-top: 1px solid var(--base-site-color); }
+
 .c-label__link {
   display: block;
   text-align: left;
-
-  &:hover,
-  &.is-active {
-    background-color: $base-site-color;
-    color: #fff;
-  }
+}
+.c-label__link:hover,
+.c-label__link.is-active {
+  background-color: var(--base-site-color);
+  color: #fff;
 }

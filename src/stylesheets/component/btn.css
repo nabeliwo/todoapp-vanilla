@@ -5,34 +5,33 @@
 .c-btn {
   display: inline-block;
   text-align: center;
+}
 
-  &.c-btn--default {
-    border: 1px solid $base-site-color;
-    background-color: $base-site-color;
-    color: #fff;
+.c-btn.c-btn--default {
+  border: 1px solid var(--base-site-color);
+  background-color: var(--base-site-color);
+  color: #fff;
+}
+.c-btn.c-btn--default:hover {
+  background-color: #fff;
+  color: var(--base-site-color);
+}
 
-    &:hover {
-      background-color: #fff;
-      color: $base-site-color;
-    }
-  }
-  &.c-btn--alert {
-    border: 1px solid $alert-color;
-    background-color: $alert-color;
-    color: #fff;
+.c-btn.c-btn--alert {
+  border: 1px solid var(--alert-color);
+  background-color: var(--alert-color);
+  color: #fff;
+}
+.c-btn.c-btn--alert:hover {
+  background-color: #fff;
+  color: var(--alert-color);
+}
 
-    &:hover {
-      background-color: #fff;
-      color: $alert-color;
-    }
-  }
-
-  &.c-btn--small {
-    padding: 5px;
-    font-size: $font-size-s;
-  }
-  &.c-btn--middle {
-    padding: 10px;
-    font-size: $font-size-m;
-  }
+.c-btn.c-btn--small {
+  padding: 5px;
+  font-size: var(--font-size-s);
+}
+.c-btn.c-btn--middle {
+  padding: 10px;
+  font-size: var(--font-size-m);
 }
