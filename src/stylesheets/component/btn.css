@@ -35,4 +35,12 @@
     padding: 10px;
     font-size: $font-size-m;
   }
+
+  &.is-disabled,
+  &.is-disabled:hover {
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    color: #fff;
+    cursor: default;
+  }
 }

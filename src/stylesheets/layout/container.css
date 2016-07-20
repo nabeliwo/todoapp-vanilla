@@ -26,16 +26,3 @@
   &.is-left { text-align: left; }
   &.is-right { text-align: right; }
 }
-.main__top__btns {
-  font-size: 0;
-
-  & > li {
-    display: inline-block;
-
-    &:not(:first-child) { margin-left: 10px; }
-  }
-}
-.main__top__length {
-  font-size: $font-size-xl;
-  line-height: 26px;
-}

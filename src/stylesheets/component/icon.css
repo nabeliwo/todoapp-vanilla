@@ -1,0 +1,37 @@
+/*-------------------------------------//
+//  Icon
+//-------------------------------------*/
+
+.c-icon {
+  display: inline-block;
+  height: 30px;
+  padding: 2px;
+  cursor: pointer;
+
+  &:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    content: "";
+  }
+
+  &.is-pencil {
+    border: 1px solid $base-site-color;
+    background-color: $base-site-color;
+
+    &:before { background-image: url(../src/images/icon-pencil.png); }
+  }
+  &.is-trash {
+    border: 1px solid $alert-color;
+    background-color: $alert-color;
+
+    &:before { background-image: url(../src/images/icon-trash.png); }
+  }
+
+  &:hover {
+    background-color: #fff;
+
+    &.is-pencil:before { background-image: url(../src/images/icon-pencil-default.png); }
+    &.is-trash:before { background-image: url(../src/images/icon-trash-alert.png); }
+  }
+}

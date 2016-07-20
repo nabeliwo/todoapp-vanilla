@@ -1,0 +1,13 @@
+/*-------------------------------------//
+//  EntireOperation
+//-------------------------------------*/
+
+.c-entireOperation {
+  font-size: 0;
+
+  & > li {
+    display: inline-block;
+
+    &:not(:first-child) { margin-left: 10px; }
+  }
+}

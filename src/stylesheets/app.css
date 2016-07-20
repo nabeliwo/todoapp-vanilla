@@ -22,8 +22,12 @@
 
 @import "./component/btn";
 @import "./component/type";
+@import "./component/entireOperation";
+@import "./component/length";
 @import "./component/input";
 @import "./component/todo";
+@import "./component/todoItem";
+@import "./component/icon";
 
 
 /*==============================================

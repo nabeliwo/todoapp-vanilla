@@ -1,0 +1,29 @@
+/*-------------------------------------//
+//  TodoItem
+//-------------------------------------*/
+
+.c-todoItem {
+  display: table;
+  width: 100%;
+
+  .c-todoItem__info {
+    visibility: hidden;
+    display: table-cell;
+    width: 90px;
+    padding: 10px;
+    font-size: 0;
+    vertical-align: middle;
+
+    & > li {
+      display: inline-block;
+
+      &:not(:first-child) { margin-left: 10px; }
+    }
+  }
+
+  &:hover .c-todoItem__info { visibility: visible; }
+}
+.c-todoItem__body {
+  display: table-cell;
+  vertical-align: middle;
+}

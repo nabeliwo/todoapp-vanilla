@@ -2,70 +2,9 @@
 //  Todo
 //-------------------------------------*/
 
-.c-todo__input { margin-bottom: 20px; }
+.c-todo__form { margin-bottom: 20px; }
 .c-todo__list {
-  border: 1px solid $base-site-color;
+  &:not(:empty) { border: 1px solid $base-site-color; }
 
-  & > li {
-    display: table;
-    width: 100%;
-
-    &:not(:first-child) { border-top: 1px dashed $base-site-color; }
-
-    .c-todo__list__info {
-      visibility: hidden;
-      display: table-cell;
-      width: 90px;
-      padding: 10px;
-      font-size: 0;
-      vertical-align: middle;
-
-      & > li {
-        display: inline-block;
-
-        &:not(:first-child) { margin-left: 10px; }
-      }
-    }
-
-    &:hover {
-      .c-todo__list__info { visibility: visible; }
-    }
-  }
-}
-.c-todo__list__body {
-  display: table-cell;
-  vertical-align: middle;
-}
-.c-todo__list__info__icon {
-  display: inline-block;
-  height: 30px;
-  padding: 2px;
-  cursor: pointer;
-
-  &:before {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    content: "";
-  }
-
-  &.is-pencil {
-    border: 1px solid $base-site-color;
-    background-color: $base-site-color;
-
-    &:before { background-image: url(../src/images/icon-pencil.png); }
-  }
-  &.is-trash {
-    border: 1px solid $alert-color;
-    background-color: $alert-color;
-
-    &:before { background-image: url(../src/images/icon-trash.png); }
-  }
-
-  &:hover {
-    background-color: #fff;
-
-    &.is-pencil:before { background-image: url(../src/images/icon-pencil-default.png); }
-    &.is-trash:before { background-image: url(../src/images/icon-trash-alert.png); }
-  }
+  & > li:not(:first-child) { border-top: 1px dashed $base-site-color; }
 }
