@@ -2,13 +2,13 @@
 //  Label
 //-------------------------------------*/
 
-.c-label {
+.c-type {
   width: 200px;
   border: 1px solid $base-site-color;
 
   & > li:not(:first-child) { border-top: 1px solid $base-site-color; }
 }
-.c-label__link {
+.c-type__link {
   display: block;
   text-align: left;
 

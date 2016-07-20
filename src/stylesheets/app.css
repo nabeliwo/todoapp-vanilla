@@ -11,8 +11,8 @@
 //  Layout
 //============================================*/
 
-@import "./layout/main";
 @import "./layout/header";
+@import "./layout/container";
 @import "./layout/footer";
 
 
@@ -21,7 +21,7 @@
 //============================================*/
 
 @import "./component/btn";
-@import "./component/label";
+@import "./component/type";
 @import "./component/input";
 @import "./component/todo";
 

@@ -8,7 +8,10 @@
   padding: 20px;
 }
 
-.side { padding-right: 20px; }
+.side {
+  min-width: 220px;
+  padding-right: 20px;
+}
 
 .main { width: 100%; }
 .main__top {
