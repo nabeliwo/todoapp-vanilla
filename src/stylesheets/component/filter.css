@@ -1,14 +1,14 @@
 /*-------------------------------------//
-//  Label
+//  Filter
 //-------------------------------------*/
 
-.c-type {
+.c-filter {
   width: 200px;
   border: 1px solid $base-site-color;
 
   & > li:not(:first-child) { border-top: 1px solid $base-site-color; }
 }
-.c-type__link {
+.c-filter__link {
   display: block;
   text-align: left;
 

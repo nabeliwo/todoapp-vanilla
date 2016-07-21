@@ -1,8 +1,10 @@
+import getUrlHash from './utils/getUrlHash';
+
+import EventEmitter from './EventEmitter';
 import Store from './Store';
 import ActionCreator from './ActionCreator';
-import EventEmitter from './EventEmitter';
 
-import Type from './views/Type';
+import Filter from './views/Filter';
 import EntireOperation from './views/EntireOperation';
 import Length from './views/Length';
 import TodoForm from './views/TodoForm';
@@ -15,11 +17,11 @@ const action = new ActionCreator(dispatcher);
 class TodoApp {
   constructor() {
     this.views = {
-      typeView: new Type(),
-      entireOperationView: new EntireOperation(),
+      filter: new Filter(),
+      entireOperation: new EntireOperation(action),
       length: new Length(),
       todoForm: new TodoForm(action),
-      todoList: new TodoList()
+      todoList: new TodoList(action)
     };
 
     this._event();
@@ -28,25 +30,58 @@ class TodoApp {
   start() {
     const state = store.getState();
 
-    this._onHashChange();
-
-    Object.keys(this.views).filter(key => typeof this.views[key].init === 'function').forEach(key => {
-      this.views[key].init(state);
+    Object.keys(this.views).filter(key => typeof this.views[key].render === 'function').forEach(key => {
+      this.views[key].render(state);
     });
   }
 
   _event() {
-    window.addEventListener('hashchange', ::this._onHashChange, false);
-    store.on('ADDTODO', ::this._onAddTodo);
+    window.addEventListener('hashchange', () => { action.changeFilter(getUrlHash()); }, false);
+
+    store.on('CHANGE FILTER', ::this._onChangeFilter);
+    store.on('ADD TODO', ::this._onAddTodo);
+    store.on('EDIT TODO', ::this._onEditTodo);
+    store.on('DELETE TODO', ::this._onDeleteTodo);
+    store.on('CHANGE ALL TODO', ::this._onChangeAllTodo);
   }
 
-  _onHashChange() {
-    const hash = location.hash.split('#/')[1] || 'all';
-    this.views.typeView.render(hash);
+  _onChangeFilter() {
+    const state = store.getState();
+
+    this.views.filter.render(state);
+    this.views.todoList.render(state);
   }
 
   _onAddTodo(todo) {
+    const state = store.getState();
+
     this.views.todoList.add(todo);
+    this.views.entireOperation.render(state);
+    this.views.length.render(state);
+  }
+
+  _onEditTodo(todo) {
+    const state = store.getState();
+
+    this.views.todoList.edit(todo);
+    this.views.entireOperation.render(state);
+    this.views.length.render(state);
+  }
+
+  _onDeleteTodo(todo) {
+    const state = store.getState();
+
+    this.views.todoList.delete(todo);
+    this.views.entireOperation.render(state);
+    this.views.length.render(state);
+  }
+
+  _onChangeAllTodo() {
+    const state = store.getState();
+
+    this.views.todoList.render(state);
+    this.views.entireOperation.render(state);
+    this.views.length.render(state);
   }
 }
 

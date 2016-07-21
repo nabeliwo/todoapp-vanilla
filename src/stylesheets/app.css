@@ -21,7 +21,7 @@
 //============================================*/
 
 @import "./component/btn";
-@import "./component/type";
+@import "./component/filter";
 @import "./component/entireOperation";
 @import "./component/length";
 @import "./component/input";

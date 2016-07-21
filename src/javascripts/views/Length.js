@@ -3,12 +3,8 @@ export default class Length {
     this.length = document.querySelector('.js-length');
   }
 
-  init(state) {
-    this.render(state);
-  }
-
   render(state) {
-    const todos = state.todos;
+    const { todos } = state;
     const todoLength = todos.length;
     const completedLength = todos.filter(todo => todo.isCompleted).length;
 

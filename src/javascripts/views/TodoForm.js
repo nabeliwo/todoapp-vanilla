@@ -2,9 +2,7 @@ export default class TodoForm {
   constructor(action) {
     this.action = action;
     this.form = document.querySelector('.js-todo-form');
-  }
 
-  init() {
     this.form.addEventListener('submit', ::this.onSubmit, false);
   }
 

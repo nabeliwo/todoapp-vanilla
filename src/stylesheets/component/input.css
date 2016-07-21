@@ -6,7 +6,12 @@
   display: inline-block;
   width: 100%;
   border: 1px solid #ccc;
+  color: #000;
 
+  &.c-input--small {
+    padding: 5px 10px;
+    font-size: $font-size-s;
+  }
   &.c-input--middle {
     padding: 10px 15px;
     font-size: $font-size-m;
@@ -15,13 +20,14 @@
 
 .c-input--checkbox { cursor: pointer; }
 .c-input--checkbox__check { display: none; }
-.c-input--checkbox__txt {
+.c-input--checkbox__body {
   position: relative;
   display: inline-block;
+  width: 100%;
   line-height: 24px;
   padding: 13px 10px 13px 40px;
 }
-.c-input--checkbox__txt:before {
+.c-input--checkbox__body:before {
   position: absolute;
   content: '';
   top: 50%;
@@ -32,9 +38,14 @@
   background-color: #fff;
   border: 1px solid #ccc;
 }
-.c-input--checkbox__check:checked + .c-input--checkbox__txt {
+.c-input--checkbox__body__txt {
+  display: block;
+  width: 100%;
+}
+.c-input--checkbox__check:checked + .c-input--checkbox__body {
   color: #ccc;
-  text-decoration: line-through;
+
+  .c-input--checkbox__body__txt { text-decoration: line-through; }
 
   &:after {
     position: absolute;

@@ -1,15 +1,8 @@
 export default class EntireOperation {
-  constructor() {
+  constructor(action) {
+    this.action = action;
     this.wrap = document.querySelector('.js-entireOperation');
     this.btn = undefined;
-  }
-
-  init(state) {
-    this.render(state);
-
-    this.btn.forEach(btn => {
-      btn.addEventListener('click', ::this.onClickBtn, false);
-    });
   }
 
   render(state) {
@@ -20,14 +13,17 @@ export default class EntireOperation {
 
     this.wrap.innerHTML = `
       <li>
-        <a href="" class="c-btn c-btn--small c-btn--default ${todoLen ? '' : 'is-disabled'}">全て${isAllCompleted ? '未' : ''}完了にする</a>
+        <a data-btn-type="${isAllCompleted ? 'incomplete' : 'complete'}" href="" class="c-btn c-btn--small c-btn--default ${todoLen ? '' : 'is-disabled'}">全て${isAllCompleted ? '未' : ''}完了にする</a>
       </li>
       <li>
-        <a href="" class="c-btn c-btn--small c-btn--alert ${existCompleted ? '' : 'is-disabled'}">完了済みを削除する</a>
+        <a data-btn-type="delete" href="" class="c-btn c-btn--small c-btn--alert ${existCompleted ? '' : 'is-disabled'}">完了済みを削除する</a>
       </li>
     `;
 
     this.btn = this.wrap.querySelectorAll('a');
+    this.btn.forEach(btn => {
+      btn.addEventListener('click', ::this.onClickBtn, false);
+    });
   }
 
   onClickBtn(e) {
@@ -39,6 +35,21 @@ export default class EntireOperation {
       return;
     }
 
-    console.log(e.target);
+    switch (target.dataset.btnType) {
+      case 'incomplete':
+        this.action.changeAllTodo(false);
+        break;
+
+      case 'complete':
+        this.action.changeAllTodo(true);
+        break;
+
+      case 'delete':
+        this.action.deleteAllCompletedTodo();
+        break;
+
+      default:
+        break;
+    }
   }
 }
