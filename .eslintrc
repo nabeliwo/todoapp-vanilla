@@ -3,7 +3,8 @@
   "rules": {
     "no-underscore-dangle": 0,
     "max-len": 0,
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "react/jsx-no-bind": 0
   },
   "parser": "babel-eslint",
   "env": {

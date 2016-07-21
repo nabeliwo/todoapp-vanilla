@@ -22,7 +22,7 @@
 
 @import "./component/btn";
 @import "./component/filter";
-@import "./component/entireOperation";
+@import "./component/operation";
 @import "./component/length";
 @import "./component/input";
 @import "./component/todo";

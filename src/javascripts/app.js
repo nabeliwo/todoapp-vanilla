@@ -5,10 +5,10 @@ import Store from './Store';
 import ActionCreator from './ActionCreator';
 
 import Filter from './views/Filter';
-import EntireOperation from './views/EntireOperation';
+import Operation from './views/Operation/';
 import Length from './views/Length';
-import TodoForm from './views/TodoForm';
-import TodoList from './views/TodoList';
+import TodoForm from './views/Todo/Form';
+import TodoList from './views/Todo/List';
 
 const dispatcher = new EventEmitter();
 const store = new Store(dispatcher);
@@ -18,7 +18,7 @@ class TodoApp {
   constructor() {
     this.views = {
       filter: new Filter(),
-      entireOperation: new EntireOperation(action),
+      operation: new Operation(action),
       length: new Length(),
       todoForm: new TodoForm(action),
       todoList: new TodoList(action)
@@ -56,7 +56,7 @@ class TodoApp {
     const state = store.getState();
 
     this.views.todoList.add(todo);
-    this.views.entireOperation.render(state);
+    this.views.operation.render(state);
     this.views.length.render(state);
   }
 
@@ -64,7 +64,7 @@ class TodoApp {
     const state = store.getState();
 
     this.views.todoList.edit(todo);
-    this.views.entireOperation.render(state);
+    this.views.operation.render(state);
     this.views.length.render(state);
   }
 
@@ -72,7 +72,7 @@ class TodoApp {
     const state = store.getState();
 
     this.views.todoList.delete(todo);
-    this.views.entireOperation.render(state);
+    this.views.operation.render(state);
     this.views.length.render(state);
   }
 
@@ -80,7 +80,7 @@ class TodoApp {
     const state = store.getState();
 
     this.views.todoList.render(state);
-    this.views.entireOperation.render(state);
+    this.views.operation.render(state);
     this.views.length.render(state);
   }
 }

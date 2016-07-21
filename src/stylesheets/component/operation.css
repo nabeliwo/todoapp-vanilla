@@ -1,8 +1,8 @@
 /*-------------------------------------//
-//  EntireOperation
+//  Operation
 //-------------------------------------*/
 
-.c-entireOperation {
+.c-operation {
   font-size: 0;
 
   & > li {

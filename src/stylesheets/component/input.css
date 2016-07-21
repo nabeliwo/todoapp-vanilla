@@ -38,14 +38,14 @@
   background-color: #fff;
   border: 1px solid #ccc;
 }
-.c-input--checkbox__body__txt {
+.c-input--checkbox__body__content {
   display: block;
   width: 100%;
 }
 .c-input--checkbox__check:checked + .c-input--checkbox__body {
   color: #ccc;
 
-  .c-input--checkbox__body__txt { text-decoration: line-through; }
+  .c-input--checkbox__body__content { text-decoration: line-through; }
 
   &:after {
     position: absolute;
