@@ -9,7 +9,7 @@ export default class EditIcon {
 
   render(todo, onEditTodo, parent) {
     this.icon = getDomNode(`
-      <i class="c-icon is-pencil js-edit">
+      <i class="c-icon is-pencil">
     `);
     this.wrap.appendChild(this.icon);
 
