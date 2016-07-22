@@ -37,7 +37,7 @@ export default class Content {
   }
 
   handleEvent(e) {
-    if (e.keyCode === 27) {
+    if (e.type === 'keyup' && e.keyCode === 27) {
       this._cancelEdit();
     }
   }
