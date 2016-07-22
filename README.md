@@ -2,7 +2,7 @@
 
 Vanilla JSでTodoアプリをつくってみた。
 
-[https://nabeliwo.github.io/product/todoapp-vanilla/](https://nabeliwo.github.io/product/todoapp-vanilla/)
+[https://nabeliwo.github.io/todoapp-vanilla/](https://nabeliwo.github.io/todoapp-vanilla/)
 
 ## 仕様
 
