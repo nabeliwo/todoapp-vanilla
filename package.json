@@ -4,8 +4,9 @@
   "description": "Vanilla JSでTodoアプリをつくってみた",
   "main": "index.html",
   "scripts": {
-    "build": "npm run build-js && npm run build-css",
+    "build": "npm run build-js && npm run build-css && npm run build-img",
     "lint": "eslint src",
+    "build-img": "imagemin src/images/*.png --out-dir dist/images/",
     "watch-js": "watchify -d src/javascripts/app.js -t babelify -o dist/bundle.js",
     "build-js": "browserify src/javascripts/app.js -t babelify -t uglifyify -o dist/bundle.js",
     "watch-css": "postcss -c ./.postcssrc.json -m -w",
@@ -34,6 +35,7 @@
     "eslint-plugin-import": "^1.10.3",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^5.2.2",
+    "imagemin-cli": "^3.0.0",
     "postcss-cli": "^2.5.2",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",

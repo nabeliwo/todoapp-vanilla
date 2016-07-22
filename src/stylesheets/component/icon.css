@@ -19,19 +19,19 @@
     border: 1px solid $base-site-color;
     background-color: $base-site-color;
 
-    &:before { background-image: url(../src/images/icon-pencil.png); }
+    &:before { background-image: url(../dist/images/icon-pencil.png); }
   }
   &.is-trash {
     border: 1px solid $alert-color;
     background-color: $alert-color;
 
-    &:before { background-image: url(../src/images/icon-trash.png); }
+    &:before { background-image: url(../dist/images/icon-trash.png); }
   }
 
   &:hover {
     background-color: #fff;
 
-    &.is-pencil:before { background-image: url(../src/images/icon-pencil-default.png); }
-    &.is-trash:before { background-image: url(../src/images/icon-trash-alert.png); }
+    &.is-pencil:before { background-image: url(../dist/images/icon-pencil-default.png); }
+    &.is-trash:before { background-image: url(../dist/images/icon-trash-alert.png); }
   }
 }
