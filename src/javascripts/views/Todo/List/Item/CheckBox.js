@@ -3,7 +3,7 @@ import getDomNode from '../../../../utils/getDomNode';
 export default class CheckBox {
   constructor(action) {
     this.action = action;
-    this.checkbox = undefined;
+    this.checkbox = null;
   }
 
   render(todo) {

@@ -1,6 +1,6 @@
 export default str => {
   const template = document.createElement('div');
-  let dom = undefined;
+  let dom = null;
 
   template.style.display = 'none';
   template.innerHTML = str;

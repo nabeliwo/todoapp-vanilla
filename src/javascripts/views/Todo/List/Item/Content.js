@@ -3,8 +3,8 @@ import getDomNode from '../../../../utils/getDomNode';
 export default class Content {
   constructor(action) {
     this.action = action;
-    this.content = undefined;
-    this.txt = undefined;
+    this.content = null;
+    this.txt = null;
   }
 
   render(todo) {

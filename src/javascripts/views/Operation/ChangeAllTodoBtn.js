@@ -3,7 +3,7 @@ import getDomNode from '../../utils/getDomNode';
 export default class ChangeAllTodoBtn {
   constructor(action) {
     this.action = action;
-    this.btn = undefined;
+    this.btn = null;
   }
 
   render(state) {

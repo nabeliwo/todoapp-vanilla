@@ -4,7 +4,7 @@ export default class EditIcon {
   constructor(action) {
     this.action = action;
     this.wrap = document.createElement('li');
-    this.icon = undefined;
+    this.icon = null;
   }
 
   render(todo, onEditTodo, parent) {

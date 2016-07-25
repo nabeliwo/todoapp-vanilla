@@ -10,7 +10,7 @@ export default class Store extends EventEmitter {
         current: getUrlHash(),
         list: ['all', 'active', 'completed']
       },
-      todos: JSON.parse(localStorage.getItem('todos')) || []
+      todos: this._getLocalStorage('todos') || []
     };
 
     dispatcher.on('changeFilter', ::this._onChangeFilter);
@@ -23,6 +23,14 @@ export default class Store extends EventEmitter {
 
   getState() {
     return this.state;
+  }
+
+  _getLocalStorage(str) {
+    return JSON.parse(localStorage.getItem(str));
+  }
+
+  _setLocalStorage() {
+    localStorage.setItem('todos', JSON.stringify(this.state.todos));
   }
 
   _onChangeFilter(state) {
@@ -53,10 +61,6 @@ export default class Store extends EventEmitter {
 
   _getUniqueString() {
     return new Date().getTime().toString(16) + Math.floor(1000 * Math.random()).toString(16);
-  }
-
-  _setLocalStorage() {
-    localStorage.setItem('todos', JSON.stringify(this.state.todos));
   }
 
   _onEditTodo(state) {
