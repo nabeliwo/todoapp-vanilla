@@ -15,17 +15,15 @@ export default class DeleteAllTodoBtn {
       </a>
     `);
 
-    this.btn.addEventListener('click', ::this._onClickBtn, false);
+    this.btn.addEventListener('click', this._onClickBtn.bind(this, existCompleted), false);
 
     return this.btn;
   }
 
-  _onClickBtn(e) {
+  _onClickBtn(existCompleted, e) {
     e.preventDefault();
 
-    const target = e.target;
-
-    if (target.classList.contains('is-disabled')) {
+    if (!existCompleted) {
       return;
     }
 
