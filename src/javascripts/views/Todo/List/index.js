@@ -22,24 +22,12 @@ export default class TodoList {
         default:
           return todo;
       }
-    }).forEach(::this.add);
+    }).forEach(::this._add);
   }
 
-  add(todo) {
+  _add(todo) {
     const todoItem = new TodoItem(this.action);
 
     this.list.appendChild(todoItem.render(todo));
-  }
-
-  edit(todo) {
-    const todoItem = new TodoItem(this.action);
-    const oldTodo = document.getElementById(todo.id);
-
-    this.list.replaceChild(todoItem.render(todo), oldTodo);
-  }
-
-  delete(todo) {
-    const deletedTodo = document.getElementById(todo.id);
-    deletedTodo.parentNode.removeChild(deletedTodo);
   }
 }

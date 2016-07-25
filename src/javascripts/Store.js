@@ -54,9 +54,7 @@ export default class Store extends EventEmitter {
         todo
       ]
     });
-
-    this._setLocalStorage();
-    this.emit('ADD TODO', todo);
+    this._changeTodo();
   }
 
   _getUniqueString() {
@@ -73,16 +71,14 @@ export default class Store extends EventEmitter {
         return todo;
       })
     });
-    this._setLocalStorage();
-    this.emit('EDIT TODO', state.todo);
+    this._changeTodo();
   }
 
   _onDeleteTodo(state) {
     this.state = Object.assign({}, this.state, {
       todos: this.state.todos.filter(todo => todo.id !== state.todo.id)
     });
-    this._setLocalStorage();
-    this.emit('DELETE TODO', state.todo);
+    this._changeTodo();
   }
 
   _onChangeAllTodo(state) {
@@ -91,15 +87,18 @@ export default class Store extends EventEmitter {
         isCompleted: state.isCompleted
       }))
     });
-    this._setLocalStorage();
-    this.emit('CHANGE ALL TODO');
+    this._changeTodo();
   }
 
   _onDeleteAllCompletedTodo() {
     this.state = Object.assign({}, this.state, {
       todos: this.state.todos.filter(todo => !todo.isCompleted)
     });
+    this._changeTodo();
+  }
+
+  _changeTodo() {
     this._setLocalStorage();
-    this.emit('CHANGE ALL TODO');
+    this.emit('CHANGE TODO', this.getState());
   }
 }

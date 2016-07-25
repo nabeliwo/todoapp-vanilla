@@ -12,36 +12,25 @@ export default class ChangeAllTodoBtn {
     const isAllCompleted = todoLen ? todos.every(todo => todo.isCompleted) : false;
 
     this.btn = getDomNode(`
-      <a data-btn-type="${isAllCompleted ? 'incomplete' : 'complete'}" href="" class="c-btn c-btn--small c-btn--default ${todoLen ? '' : 'is-disabled'}">
+      <a href="" class="c-btn c-btn--small c-btn--default ${todoLen ? '' : 'is-disabled'}">
         全て${isAllCompleted ? '未' : ''}完了にする
       </a>
     `);
 
-    this.btn.addEventListener('click', ::this._onClickBtn, false);
+    this.btn.addEventListener('click', this._onClickBtn.bind(this, [todoLen, isAllCompleted]), false);
 
     return this.btn;
   }
 
-  _onClickBtn(e) {
+  _onClickBtn(state, e) {
     e.preventDefault();
 
-    const target = e.target;
+    const [todoLen, isAllCompleted] = state;
 
-    if (target.classList.contains('is-disabled')) {
+    if (!todoLen) {
       return;
     }
 
-    switch (target.dataset.btnType) {
-      case 'incomplete':
-        this.action.changeAllTodo(false);
-        break;
-
-      case 'complete':
-        this.action.changeAllTodo(true);
-        break;
-
-      default:
-        break;
-    }
+    this.action.changeAllTodo(!isAllCompleted);
   }
 }
